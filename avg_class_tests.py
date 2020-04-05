@@ -9,7 +9,7 @@ class TestAvg:
         self.top1_frame = tkinter.Frame(self.main_window)
         self.top2_frame = tkinter.Frame(self.main_window)
         self.top3_frame = tkinter.Frame(self.main_window)
-        self.mid_frame = tkinter.Frame(self.main_window)
+        self.mid_frame = tkinter.Frame(self.main_window, borderwidth=4, relief="sunken")
         self.bottom_frame = tkinter.Frame(self.main_window)
 
         self.top1_frame.pack()
@@ -44,7 +44,7 @@ class TestAvg:
         self.avg_label.pack(side="left")
 
         self.calc_button = tkinter.Button(self.bottom_frame, text="Calculate", command=self.calc_avg)
-        self.quit_button = tkinter.Button(self.bottom_frame, text="Quit", command=self.main_window.destroy)
+        self.quit_button = tkinter.Button(self.bottom_frame, fg="red", width=15, height=2, text="Quit", command=self.main_window.destroy)
         self.calc_button.pack(side="left")
         self.quit_button.pack(side="left")
 
