@@ -4,6 +4,7 @@ import tkinter.messagebox
 
 class MyGUI:
     def __init__(self):
+        self.message = ''
         self.main_window = tkinter.Tk()
         self.main_window.title("Check Buttons")
 
