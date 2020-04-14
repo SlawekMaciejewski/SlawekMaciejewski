@@ -1,4 +1,5 @@
 import tkinter
+import tkinter.font
 
 
 class MyGUI:
@@ -8,6 +9,7 @@ class MyGUI:
         self.window3 = tkinter.Tk()
         self.window4 = tkinter.Tk()
         self.window5 = tkinter.Tk()
+        self.window6 = tkinter.Tk()
 
         self.canvas = tkinter.Canvas(self.main_window, width=200, height=200)
         self.canvas.pack()
@@ -37,7 +39,13 @@ class MyGUI:
         points_polygon = (60, 20, 100, 20, 140, 60, 140, 100, 100, 140, 60, 140, 20, 100, 20, 60)
         self.canvas5.create_polygon(points_polygon, fill='white', outline='blue')
 
-
+        self.canvas6 = tkinter.Canvas(self.window6, width=200, height=200)
+        self.canvas6.pack()
+        my_font = tkinter.font.Font(family='Helvetica', size='18', weight='bold', slant='italic', underline=1,
+                                    overstrike=1)
+        # my_font = tkinter.font.Font(family='The Darkest Night', size='18')
+        self.canvas6.create_text(100, 100, text="Hello World!\n next text ", font=my_font, fill='green', anchor='se',
+                                 justify='center')  # anchor='center' and justify='left' are default
 
         tkinter.mainloop()
 
