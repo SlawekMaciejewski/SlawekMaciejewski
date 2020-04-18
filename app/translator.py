@@ -29,8 +29,7 @@ class MyGUI:
 
         self.label = tkinter.Label(self.bottom_frame, text="English translation: ")
         self.translate = tkinter.StringVar()
-        self.translate_label = tkinter.Label(self.bottom_frame, text="English translation: ",
-                                             textvariable=self.translate)
+        self.translate_label = tkinter.Label(self.bottom_frame, textvariable=self.translate)
         self.label.pack(side='left')
         self.translate_label.pack(side='left')
 
